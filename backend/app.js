@@ -3,6 +3,9 @@ const {calculateBMI} = require('./bmi')
 
 const app = express()
 app.use(express.json())
+app.get('/', function(req, res){
+    res.sendFile(process.cwd()+'/frontend/index.html');
+    });
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type')

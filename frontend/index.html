@@ -18,7 +18,7 @@
       const weight = Number(document.getElementById('weight').value)
       const height = Number(document.getElementById('height').value)
 
-      const res = await fetch('http://localhost:3000/bmi', {
+      const res = await fetch('https://bmi-api-production.up.railway.app/bmi', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ weight, height })
