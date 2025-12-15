@@ -18,7 +18,7 @@ describe('POST /bmi', () => {
         .send({weight: -0.1, height: 165})
 
     expect(res.status).toBe(400)
-    expect(res.body.error).toBe('please input weight in rage 0 - 300')
+    expect(res.body.error).toBe('please input weight in range 0 - 300')
     })
 
     it('should return 400 when weight more than 300', async () => {
@@ -27,7 +27,7 @@ describe('POST /bmi', () => {
         .send({weight: 300.1, height: 165})
 
     expect(res.status).toBe(400)
-    expect(res.body.error).toBe('please input weight in rage 0 - 300')
+    expect(res.body.error).toBe('please input weight in range 0 - 300')
     })
     
     it('should return 400 when height less than 0', async () => {
@@ -36,7 +36,7 @@ describe('POST /bmi', () => {
         .send({weight: 50, height: -0.1})
 
     expect(res.status).toBe(400)
-    expect(res.body.error).toBe('please input height in rage 0 - 300')
+    expect(res.body.error).toBe('please input height in range 0 - 300')
     })
 
     it('should return 400 when height more than 300', async () => {
@@ -45,6 +45,6 @@ describe('POST /bmi', () => {
         .send({weight: 50, height: 300.1})
 
     expect(res.status).toBe(400)
-    expect(res.body.error).toBe('please input height in rage 0 - 300')
+    expect(res.body.error).toBe('please input height in range 0 - 300')
     })
 })
