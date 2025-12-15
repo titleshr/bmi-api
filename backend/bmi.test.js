@@ -52,12 +52,12 @@ describe('BMI not valid weight value less than 0 and more than 300',() =>{
     it('should throw error when weight less than 0', () => {
         expect(() => {
           calculateBMI(-0.1, 165)
-        }).toThrow('please input weight in rage 0 - 300')
+        }).toThrow('please input weight in range 0 - 300')
     })
     it('should throw error when weight more than 300', () => {
         expect(() => {
             calculateBMI(300.1,165)
-        }).toThrow('please input weight in rage 0 - 300')
+        }).toThrow('please input weight in range 0 - 300')
     }
     )
 })
@@ -65,12 +65,12 @@ describe('BMI not valid height value less than 0 and more than 300',() =>{
     it('should throw error when height less than 0', () => {
         expect(() => {
           calculateBMI(50, -0.1)
-        }).toThrow('please input height in rage 0 - 300')
+        }).toThrow('please input height in range 0 - 300')
     })
     it('should throw error when height more than 300', () => {
         expect(() => {
             calculateBMI(50,300.1)
-        }).toThrow('please input height in rage 0 - 300')
+        }).toThrow('please input height in range 0 - 300')
     }
     )
 })

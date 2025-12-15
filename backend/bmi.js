@@ -7,10 +7,10 @@ function getBMICategory(bmi) {
 }
 function calculateBMI(weight,height){
     if (weight < 0 || weight > 300 || weight == false){
-        throw new Error('please input weight in rage 0 - 300')
+        throw new Error('please input weight in range 0 - 300')
     }
     if (height < 0 || height > 300 || weight == false){
-        throw new Error('please input height in rage 0 - 300')
+        throw new Error('please input height in range 0 - 300')
     }
     const bmi = Number((weight/((height/100)**2)).toFixed(1));
     const text = getBMICategory(bmi)
